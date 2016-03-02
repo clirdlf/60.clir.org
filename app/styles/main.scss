@@ -1,8 +1,21 @@
 $icon-font-path: '../fonts/';
 
+$black: #000;
+$gray: #4e4e4e;
+$white: #fff;
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+@function headings($from:1, $to:6) {
+    @if $from == $to {
+        @return 'h#{$from}';
+    } @else {
+        @return 'h#{$from},' + headings($from+1, $to);
+    }
+}
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -11,83 +24,288 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  color: $gray;
+  font-weight: 300;
+  line-height: 1.6;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+a {
+  color: $black;
+  &:focus { outline: none; }
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+#{headings(1,6)} {
+  font-weight: 700;
+}
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+p { margin: 0 0 30px; }
+
+ul li {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.valign-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+}
+
+// utiltities
+.btn-white {
+  color: #000;
+  background-color: #fff;
+}
+.btn-white:hover, .btn-white:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #000;
+}
+.btn-black:hover, .btn-black:focus {
+  color: #fff;
+  background-color: #000;
+}
+
+.custom-list-icon, .list-arrow-right {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      color: $gray;
+      font-family: "Ionicons"
+    }
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+.list-arrow-right li::before {
+  content: "\f3d3";
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+@media (min-width: 768px) {
+  .section {
+    padding: 90px;
+  }
+
+  .section-title {
+    color: #313131;
+    letter-spacing: 1px;
+    margin: 0 0 60px;
+    text-transform: uppercase;
+    text-align: left;
+  }
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+// Backgrounds
+
+.bg-image {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.bg-image-1 {
+  @extend .bg-image;
+  background: url('/images/backgrounds/times.jpg') no-repeat center center/cover;
+
+  &::before {
+    background-color: rgba(0,0,0, 0.7);
+  }
+}
+
+.bg-image-2 {
+	@extend .bg-image;
+	background: url(../images/backgrounds/northern-lights.jpg) no-repeat center bottom / cover;
+
+	&::before {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+// Navigation
+
+.navbar-custom {
+  border: 0;
+  margin: 0;
+  padding-top: 10px;
+  background-color: $black;
+  transition: alll 0.2s linear 0s;
+
+  .navbar-nav {
+    li { margin: 0; }
+    & > .active > a {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    & > li > a {
+      color: $white;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      border-bottom: 1px solid transparent;
+
+      &:focus, &:hover {
+        background-color: transparent;
+        border-color: rgba(255, 255, 255, 0);
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  border: 0;
+  border-radius: 0;
+  margin-top: 2px;
+
+  .icon-bar {
+    background-color: $white;
+  }
+}
+
+.navbar-solid {
+  background-color: $black !important;
+  padding: 0 !important;
+  transition: all 0.2s linear 0s;
+}
+
+.site-branding {
+  float: left;
+  margin-top: 0;
+  margin-left: 10px;
+
+  .logo {
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    min-height: 100vh;
+    margin-right: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Site Header
+.site-header {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  background: url('/images/backgrounds/chevy.jpg') no-repeat center center/cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .intro {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    z-index: 1;
+    padding: 0 15px;
+
+    h1 {
+      margin-top: 0px;
+      font-size: 30px;
+    }
+    h2 {
+      margin-top: 0px;
+      font-size: 25px;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+@media (min-width: 768px) {
+  .navbar-custom {
+    background-color: transparent;
+    padding-top: 30px;
+  }
+
+  .site-branding {
+    margin-top: 6px;
+    margin-left: 0;
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+// Sections
+.about {
+  .section-title {
+    margin: 0 0 25px;
   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+  figure {
+    margin-bottom: 25px;
   }
+}
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+.facts {
+  i {
+    color: $white;
+    font-size: 3em;
   }
+  h3 {
+    color: $white;
+    text-align: center;
+    font-weight: 400;
+  }
+}
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+.sponsor {
+  background-color: #f8f8f8;
+
+  .sponsor-box {
+    display: block;
+    opacity: 0.3;
+    height: 150px;
+    width: 150px;
+    margiN: 25px auto;
+    transition: 0.5s all linear;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
