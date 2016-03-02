@@ -1,12 +1,6 @@
-console.log('\'Allo \'Allo!');
+/*global $, smoothScroll*/
 
-$(window).scroll(function(){
-  handleTopAnimation();
-});
-
-$(window).load(function(){
-    handleTopAnimation();
-});
+'use strict';
 
 function handleTopAnimation() {
   var top = $(window).scrollTop();
@@ -17,5 +11,17 @@ function handleTopAnimation() {
     $('#site-nav').removeClass('navbar-solid');
   }
 }
+
+console.log('\'Allo \'Allo!');
+
+$(window).scroll(function(){
+  handleTopAnimation();
+});
+
+$(window).load(function(){
+    handleTopAnimation();
+});
+
+
 
 smoothScroll.init();
