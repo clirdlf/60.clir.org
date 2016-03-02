@@ -77,6 +77,9 @@
             <li>
               <a data-scroll href="#photos">Photos</a>
             </li>
+            <li>
+              <a data-scroll href="#donate">Donate</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -92,7 +95,7 @@
 
         <p>some more text</p>
 
-        <a class="btn btn-white" data-scroll href="#about">Find Out More</a>
+        <a class="btn btn-white" data-scroll href="#donate">Donate Today</a>
 
       </div>
     </header>
@@ -183,22 +186,20 @@
         </div>
         <div class="row">
           <div class="col-sm-3">
-              <a class="partner-box partner-box-1"></a>
+            <a class="partner-box partner-box-1"></a>
           </div>
           <div class="col-sm-3">
-              <a class="partner-box partner-box-2"></a>
+            <a class="partner-box partner-box-2"></a>
           </div>
           <div class="col-sm-3">
-              <a class="partner-box partner-box-3"></a>
+            <a class="partner-box partner-box-3"></a>
           </div>
           <div class="col-sm-3">
-              <a class="partner-box partner-box-4"></a>
+            <a class="partner-box partner-box-4"></a>
           </div>
         </div>
       </div>
     </section>
-
-
 
     <section id="photos" class="section photos">
       <div class="container">
@@ -243,21 +244,82 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-    <div class="container">
+    <section id="donate" class="section dontate">
+      <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <p class="site-info">CLIR@60 <a href="http://clir.org">CLIR</a></p>
-                <ul class="social-block">
-                    <li><a href="https://twitter.com/clirnews"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/pages/Council-on-Library-and-Information-Resources-CLIR/300100435096"><i class="ion-social-facebook"></i></a></li>
-                    <!-- <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li> -->
-                    <li><a href="http://www.youtube.com/user/DLFCLIR?blend=2&ob=0"><i class="ion-social-youtube"></i></a></li>
-                </ul>
-            </div>
+          <div class="col-md-12">
+            <h3 class="section-title">Donate</h3>
+          </div>
         </div>
-    </div>
-</footer>
+        <form action="#" id="donation-form">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="First Name" id="fname" name="fname" required>
+              </div>
+
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lname" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <div class="input-group">
+                  <h4>Amount</h4>
+                  <input type="radio" aria-label="60"> $60 <br>
+                  <input type="radio" aria-label="100"> $100 <br>
+                  <input type="radio" aria-label="100"> $500 <br>
+                  <input type="radio" aria-label="100"> $1,000 <br>
+                </div>
+
+          
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center mt20">
+                <button type="submit" class="btn btn-black" id="donate-submit-btn">Donate</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="site-info">CLIR@60
+              <a href="http://clir.org">CLIR</a>
+            </p>
+            <ul class="social-block">
+              <li>
+                <a href="https://twitter.com/clirnews">
+                  <i class="ion-social-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/pages/Council-on-Library-and-Information-Resources-CLIR/300100435096">
+                  <i class="ion-social-facebook"></i>
+                </a>
+              </li>
+              <!-- <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li> -->
+              <li>
+                <a href="http://www.youtube.com/user/DLFCLIR?blend=2&ob=0">
+                  <i class="ion-social-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
