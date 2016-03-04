@@ -22,7 +22,7 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.css"/>
+    <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -34,7 +34,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body data-spy="scroll" data-target="#site-nav">
+  <body id="top" data-spy="scroll" data-target="#site-nav">
     <!--[if lt IE 10]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
     <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
       <div class="container">
@@ -42,7 +42,7 @@
 
           <!-- logo -->
           <div class="site-branding">
-            <a class="logo" href="index.html">
+            <a class="logo" data-scroll href="#top" >
 
               <!-- logo image  -->
               <img width="38" src="images/clir.png" alt="Logo">
@@ -95,7 +95,7 @@
 
         <p>some more text</p>
 
-        <a class="btn btn-white" data-scroll href="#donate">Donate Today</a>
+        <a class="btn btn-orange btn-donate ion-android-favorite-outline" data-scroll href="#donate"> Donate Today</a>
 
       </div>
     </header>
@@ -269,20 +269,27 @@
               <div class="form-group">
                 <div class="input-group">
                   <h4>Amount</h4>
-                  <input type="radio" aria-label="60"> $60 <br>
-                  <input type="radio" aria-label="100"> $100 <br>
-                  <input type="radio" aria-label="100"> $500 <br>
-                  <input type="radio" aria-label="100"> $1,000 <br>
+                  <input type="radio" aria-label="60">
+                  $60
+                  <br>
+                  <input type="radio" aria-label="100">
+                  $100
+                  <br>
+                  <input type="radio" aria-label="100">
+                  $500
+                  <br>
+                  <input type="radio" aria-label="100">
+                  $1,000
+                  <br>
                 </div>
 
-          
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="text-center mt20">
-                <button type="submit" class="btn btn-black" id="donate-submit-btn">Donate</button>
+                <button type="submit" class="btn btn-orange btn-donate ion-android-favorite-outline" id="donate-submit-btn"> Donate</button>
               </div>
             </div>
           </div>
@@ -291,8 +298,74 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-      <div class="container">
+    <footer id="colophon" role="contentinfo" class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-3">
+              <h3>Contact Us</h3>
+              <address class="vcard">
+                <h3 class="org vcard">CLIR</h3>
+                <p class="adr">
+                  <span class="street-address">1707 L St. NW</span>
+                  <span class="street-address">Suite 650</span>
+                  <span class="locality">Washington</span>
+                  <span class="region" title="District of Columbia">DC</span>,
+                  <span class="postal-code">20036</span>
+                </p>
+                <p class="tel">
+                  202-939-4750
+                </p>
+              </address>
+            </div>
+            <div class="col-md-3">
+              <h3>Our Programs</h3>
+              <ul class="list-arrow-right">
+                <li>
+                  <a href="http://clir.org">CLIR</a>
+                </li>
+                <li>
+                  <a href="https://diglib.org">DLF</a>
+                </li>
+                <li>
+                  <a href="http://www.clir.org/initiatives-partnerships/cios">CIOs of Liberal Arts Colleges</a>
+                </li>
+                <li>
+                  <a href="http://coherence.clir.org/">Committee on Coherence at Scale for Higher Education</a>
+                </li>
+                <li>
+                  <a href="http://www.clir.org/initiatives-partnerships/data-curation">Data Curation</a>
+                </li>
+                <li>
+                  <a href="http://www.clir.org/hiddencollections">Digitizing Hidden Collections</a>
+                </li>
+                <li>
+                  <a href="http://leadingchangeinstitute.org">Leading Change Institute</a>
+                </li>
+                <li>
+                  <a href="http://www.clir.org/initiatives-partnerships/ndsr">National Digital Stewardship Residency</a>
+                </li>
+                <li>
+                  <a href="http://www.clir.org/fellowships/postdoc">Postdoctoral Fellowship Program</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h3>Upcoming Events</h3>
+              <div class="events">
+
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h3>Subscribe</h3>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
         <div class="row">
           <div class="col-md-12">
             <p class="site-info">CLIR@60
@@ -351,7 +424,6 @@
     <script src="/bower_components/outlayer/outlayer.js"></script>
     <script src="/bower_components/masonry/masonry.js"></script>
     <script src="/bower_components/isotope/js/isotope.js"></script>
-    <script src="/bower_components/smooth-scroll/smooth-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
