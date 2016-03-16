@@ -10,6 +10,22 @@
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.1"
   },
   "overrides": {
+    "isotope": {
+      "main": [
+        "js/item.js",
+        "js/layout-mode.js",
+        "js/isotope.js",
+        "js/layout-modes/vertical.js",
+        "js/layout-modes/fit-rows.js",
+        "js/layout-modes/masonry.js"
+      ]
+    },
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "assets/stylesheets/_bootstrap.scss",
