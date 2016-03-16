@@ -10,6 +10,11 @@
     "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^9.1.1"
   },
   "overrides": {
+    "smooth-scroll": {
+      "main": [
+        "dist/js/smooth-scroll.js"
+      ]
+    },
     "isotope": {
       "main": [
         "js/item.js",
