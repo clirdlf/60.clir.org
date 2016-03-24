@@ -12,7 +12,7 @@ var config = {
   deploy: {
     cname: '60.clir.org'
   }
-}
+};
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -87,6 +87,7 @@ gulp.task('fonts', () => {
 
 gulp.task('extras', () => {
   return gulp.src([
+    'app/CNAME',
     'app/*.*',
     '!app/*.html'
   ], {
@@ -167,7 +168,6 @@ gulp.task('wiredep', () => {
 
 gulp.task('deploy', ['build'],() => {
   return gulp.src('dist')
-    .pipe(file('CNAME', config.deploy.cname))
     .pipe($.subtree());
     // .pipe($.clean());
 });
