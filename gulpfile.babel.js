@@ -8,12 +8,6 @@ import {stream as wiredep} from 'wiredep';
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-var config = {
-  deploy: {
-    cname: '60.clir.org'
-  }
-};
-
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
