@@ -22,9 +22,14 @@ npm install
 
 Open the project in your editor of choice. There is a `gulp` task that will run a server in the background and auto-refresh when you save a change to the project.
 
-`$ gulp serve`
+```
+$ cd ~/projects/60.clir.org
+$ atom .
+$ gulp serve
+```
 
-All of the files needed are in the `app` directory.
+All of the files needed are in the `app` directory, specifically
+`index.html`
 
 ## Deploying
 
