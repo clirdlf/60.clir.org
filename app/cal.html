@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
 
@@ -12,7 +13,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  <script>
     $(document).ready(function() {
       var minDate = moment().format("YYYY-MM-DDTHH:mm:ssZ"); //today
-      var gcalData = 'https://www.googleapis.com/calendar/v3/calendars/g2hval0pee3rmrv4f3n9hp9cok@group.calendar.google.com/events?key=AIzaSyA5W2MDJs9uknQv6Cn4OZ07K-wtvkoqYwE&maxResults=10&timeMin=' + minDate;
+      var gcalData = 'https://www.googleapis.com/calendar/v3/calendars/g2hval0pee3rmrv4f3n9hp9cok@group.calendar.google.com/events?key=AIzaSyA5W2MDJs9uknQv6Cn4OZ07K-wtvkoqYwE&sortorder=desc&orderby=starttime&timeMin=' + minDate;
+      console.log(gcalData);
       // TODO: orderBy=startTime
       $.getJSON(gcalData, function(i){
         // console.log(i);
