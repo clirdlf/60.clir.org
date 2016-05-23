@@ -1,1 +1,26 @@
-"use strict";function handleTopAnimation(){var o=$(window).scrollTop();o>10?$("#site-nav").addClass("navbar-solid"):$("#site-nav").removeClass("navbar-solid")}console.log("'Allo 'Allo!"),$(window).scroll(function(){handleTopAnimation()}),$(window).load(function(){handleTopAnimation()}),smoothScroll.init();
+/*global $, smoothScroll*/
+
+'use strict';
+
+function handleTopAnimation() {
+  var top = $(window).scrollTop();
+
+  if (top > 10) {
+    $('#site-nav').addClass('navbar-solid');
+  } else {
+    $('#site-nav').removeClass('navbar-solid');
+  }
+}
+
+console.log('\'Allo \'Allo!');
+
+$(window).scroll(function () {
+  handleTopAnimation();
+});
+
+$(window).load(function () {
+  handleTopAnimation();
+});
+
+smoothScroll.init();
+//# sourceMappingURL=main.js.map

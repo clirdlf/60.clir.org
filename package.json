@@ -40,5 +40,9 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "gulp-ignore": "^2.0.1",
+    "gulp-util": "^3.0.7"
   }
 }
