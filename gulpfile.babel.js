@@ -58,7 +58,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     //.pipe(ignore.exclude([ "**/*.map" ]))
     //.pipe($.if('*.js', $.uglify().on('error', gutil.log)))
-    //.pipe($.if('*.css', $.cssnano()))
+    .pipe($.if('*.css', $.cssnano()))
     //.pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
 });
