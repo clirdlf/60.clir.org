@@ -42,7 +42,7 @@ edits you would like to see, point your browser at
 
 Updates can be deployed by pushing the update to the Github `gh-pages`
 branch. This is the default branch of the project and can be deployed
-through the Github client with the "sync" button, or in the `git` client:
+through the Github client with the **sync** button, or in the `git` client:
 
 ```bash
 $ git commit -am "Meaningful update message"
