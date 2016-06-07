@@ -3,3 +3,8 @@ node_modules
 .sass-cache
 bower_components
 test/bower_components
+
+_site
+.jekyll-metadata
+npm-debug.log
+
