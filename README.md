@@ -38,6 +38,10 @@ The main file to edit content is the `index.html`. After you have made
 edits you would like to see, point your browser at
 [http://localhost:4000](http://localhost:4000).
 
+### Stopping the Server
+
+To stop the server, hit `ctrl + c` or close the terminal window.
+
 ## Deploying
 
 Updates can be deployed by pushing the update to the Github `gh-pages`
